@@ -86,7 +86,7 @@ int c = *((int *) ptr);
 printf("%d", c);
 // c will have the same bits as x, but as doubles and ints are different formats, we have a completely gibberish number
 ```
-'c' will have the same bits as 'x' (at least the first 32 bits of x), but the alternate formats and size. 'c' will be a completely gibberish numbers. 
+'c' will have the same bits as 'x' (at least the first 32 bits of x), but the alternate formats and size. 'c' will be a completely gibberish number.
 
 ### Void pointers
 - A pointer which points to ==anything==
@@ -114,11 +114,11 @@ stdint.h defines int64, uint64 and other int types with garunteed sizes
 
 ## Arrays
 - A continuous block of homogenous data
-- Automatically allocated by compiler with a fixed size [^1]
+- Automatically allocated by compiler with a fixed size [^3]
 - Uses \[ \] syntax
 - Refer to element with arr\[3\]
 - Bare name 'arr' is the memory address where array starts
 - This actually means arrays are also pointers!
 - And array indexing is pointer deferencing, `array[3]` == `*(array + 3)`
 
-[^1]: This is refering to fixed size arrays, not heap allocated arrays made with malloc/calloc
+[^3]: This is refering to fixed size arrays, not heap allocated arrays made with malloc/calloc
