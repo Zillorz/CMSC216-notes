@@ -124,11 +124,13 @@ For example, calling `printf` or `strlen` would cause problems.
 ### Strings are character arrays
 - Convention is to use `char*` as strings
 - Strings end with the null terminator '\0'
+- Character arrays need a terminating '\0' at the end
 - Null termination is done automatically for constants
 - Null termination is also done by standard functions like `scanf`
 
 > [!WARNING]
 > When manipulating strings, make sure you don't remove/modify the null terminator!
+> The built-in `fread()` does not append nulls on binary data
 
 
 #### String Library
