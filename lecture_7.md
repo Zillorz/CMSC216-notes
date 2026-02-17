@@ -52,7 +52,7 @@ free(fs);
 - labels:
 - Very basic, same as Java
 
-[^1] DO NOT USE GOTO, you need permission from Kauffman to not lose ALL style points with a goto :/
+[^1]: DO NOT USE GOTO, you need permission from Kauffman to not lose ALL style points with a goto :/
 
 `switch()/case`: The **worst** control structure
 
