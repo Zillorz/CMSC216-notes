@@ -237,8 +237,9 @@ void size_of_sometimes_works() {
   assert("pointer is 8 bytes", sizeof(int *) == 8);
 
   int arr_int[4] = {7, 6, 5, 4};
-  char *str = "Hi guys!";
+  char *str = "Hi!";
   double *arr_dynamic = malloc(sizeof(double) * 12);
+  for(int i = 0; i < 12; i++) { arr_dynamic[i] = i * 0.2; }
 
   assert("Shows size of static/compile time array",
          sizeof(arr_int) == 4 * sizeof(int));
@@ -359,6 +360,8 @@ void print_file() {
   fprintf(f, "Goodbye world!\n");
   fclose(f);
 
+  // This is actually a good use of pointer arithmetic as well! 
+  // You can see it help us use multiple sprintf on one char[]
   sprintf(comp, "Hello, world!\n");
   sprintf(comp + strlen(comp), "This is my file\n");
   sprintf(comp + strlen(comp), "Goodbye world!\n");

@@ -9,6 +9,4 @@ This is a list of things I think could be tricky or complicated on exam 1
 
 ### Copy Semantics
 - Everything is a DIRECT copy
-- Use a for loop / `memcpy()` / `strcpy()` on pointers and arrays
-
-###
+- Use a for loop / `memcpy()` / `strcpy()` on pointers and dynamic arrays
