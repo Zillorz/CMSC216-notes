@@ -137,5 +137,5 @@ For example, calling `printf` or `strlen` would cause problems.
 - Include with `#include <string.h>`   
 - Null termination expected
 - `strlen(s)` - length of string
-- `strcpy(src, dst)` - copys string from src to dst
-
+- `strcpy(dst, src)` - copys string from src to dst
+- `strcmp(s1, s2)` - compares string lexicographically, 0 if equal

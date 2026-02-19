@@ -29,6 +29,7 @@ for(int i = 0; i < len; i++) {
     printf("%d ", nums[i]);
 }
 printf("\n");
+free(nums); // Don't forget to free!
 ```
 
 ## Compile and Runtime vs Memory Management
@@ -76,7 +77,8 @@ Common misconception: `sizeof(thing)`
 - **NOT USEFUL** for sizes of arrays or strings
 ```c
 int *arr = malloc(32 * sizeof(int)); // good use of sizeof
-int nelems = sizeof(arr); // This is always 8!!! BAD!
+int nelems = sizeof(arr); // BAD USAGE!
+printf("Num elements: %d", nelems); // This always prints 8!
 ```
 - For array size, search for sentinel or be given size
 - For string size, use `strlen`
@@ -90,7 +92,4 @@ Valgrind: Suite of tools including Memcheck
     - Memory leaks
 - Source line where problem arose (but not its cause)
 - Super easy to use: `valgrind ./program`
-- Slows execution of program down 
-
-
-
+- Slows execution of program down

@@ -63,8 +63,8 @@ Kauffman really, really hates switch statements. NEVER use them unless you're wr
 ### A program is born
 - Write some C code in `program.c`
 - Compile it with a C compiler
-    - `gcc -o program prog.c`
-    - `clang -o program prog.c`
+    - `gcc -o program program.c`
+    - `clang -o program program.c`
 - Compilation is a multi-step process
     - Check syntax for correctness/errors
     - Perform optimizations on the code if possible
@@ -72,7 +72,7 @@ Kauffman really, really hates switch statements. NEVER use them unless you're wr
     - Assemble code into object code
     - Link required libraries
 - Result: executable program
-- Running a progrm requires a loader
+- Running a program requires a loader
 
 
 **END OF EXAM 1 CONTENT**
@@ -104,7 +104,7 @@ char* reverse(char* inp) {
     }
 
     rev[len] = '\0';
-    free(inp); // bad practice to free an arugment
+    free(inp); // bad practice to free an argument
     return rev;
 }
 
@@ -143,7 +143,7 @@ int main() {
 - "%d": Decimal
 - "%o": Unsigned octal
 - "%u": Unsigned decimal 
-- "%x": Unsigned hexadeciaml
+- "%x": Unsigned hexadecimal
 - Octal is 0 through 7, base 8
 - Hexadecimal is 0 to F (switches to letters after 9)
 

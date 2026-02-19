@@ -5,7 +5,7 @@
 | Bytes [^1]| Name | Range |
 | ------------- | ------------- | -------------- |
 |   | INTEGRAL |   |
-| 1 | char | -128 to 127 |
+| 1 | char | -128 to 127 [^4] |
 | 2 | short | -32,768 to 32,767 |
 | 4 | int | -2^31 to 2^31 - 1 |
 | 8 | long | -2^63 to 2^63 - 1 |
@@ -20,6 +20,7 @@
 
 [^1]: These sizes are not standard, portable code cannot assume any given size
 [^2]: We run 64 bit computers, so we will assume 8 bytes for every pointer
+[^4]: Fun fact about characters, these aren't always guaranteed to be signed. This is also implementation dependent and portable code cannot assume signed or unsigned chars. On x86_64 machines, these are signed. On ARM64, it depends on the machine, where MacOS/IOS sign chars, but Windows, Linux, and Android do not.
 
 ### More about pointers
 - Pointers are written with a *, e.g. 
@@ -28,7 +29,7 @@
 - Array indexing is a pointer deference
 - `array[12]` = `*(array + 12)`
 - Strings are represented by `char*` or `char[]`, there isn't a dedicated string type 
-- Same with booleans, usually represented by char/int wit 0 = false and 1 = true
+- Same with booleans, usually represented by char/int with 0 = false and 1 = true
 - `void` normally means, nothing but a `void*` is just a pointer to a memory address that stores anything
 
 ### Recall: Pointers, Address, and Dereferences
@@ -83,8 +84,7 @@ double y = *((double *) ptr);
 
 // SAFETY: ptr points to a double, but we casted it to an int??
 int c = *((int *) ptr);
-printf("%d", c);
-// c will have the same bits as x, but as doubles and ints are different formats, we have a completely gibberish number
+printf("%d", c); // 309237645
 ```
 'c' will have the same bits as 'x' (at least the first 32 bits of x), but the alternate formats and size. 'c' will be a completely gibberish number.
 

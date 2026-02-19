@@ -34,7 +34,7 @@ int main() {
 
 ## Structs
 Heterogeneous Groupings of Data
-- Arrays are homogeneous; all elements the same type
+- Arrays are homo genius; all elements the same type
 - `structs` are C's way of defining heterogeneous data
 - Each **field** can be a different kind/type
 - One instance of a `struct` has all fields
@@ -60,7 +60,7 @@ thing_t ct = { .first_letter = 'j', .letters = "james" };
 ```
 
 ### Structs in memory
-- Structs alloated in memory are laid out compactly
+- Structs allocated in memory are laid out compactly
 - Compiler may *pad* fields to place them at nice alignments
     - The compiler likes items starting at multiples of 4/8
 
@@ -114,4 +114,3 @@ small_things->x = 3.222; // BAD!
     - `fclose` frees a `FILE*`
     - `rewind` goes back to start of `FILE*`, allows for re-reading
     - if `fscanf` or `fread` returns `EOF`, file is over, EOF = End of File
-
