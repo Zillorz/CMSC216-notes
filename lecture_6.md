@@ -34,8 +34,8 @@ int main() {
 
 ## Structs
 Heterogeneous Groupings of Data
-- Arrays are homogenous; all elements the same type
-- `structs` are C's way of defining heterogenous data
+- Arrays are homogeneous; all elements the same type
+- `structs` are C's way of defining heterogeneous data
 - Each **field** can be a different kind/type
 - One instance of a `struct` has all fields
 - Access elements with 'dot' or '->' notation
