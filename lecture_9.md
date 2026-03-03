@@ -22,7 +22,10 @@ void showbits(int b) {
 }
 
 int main() {
-    showbits(3292);
+    int n;
+    printf("Number: ");
+    scanf("%d", &n);
+    showbits(n);
     return 0;
 }
 ```
@@ -112,7 +115,25 @@ int permissions = do(CAN_COMMENT | CAN_WATCH);
 > [!NOTE]
 > There are also Special Registers like `%rip` and `%eflags` which we will discuss later
 
-SEE TABLE
+
+| 64-bit | 32-bit | 16-bit | 8-bit | Saved By | Notes |
+| ---- | ---- | ---- | ---- | ---- | ---- |
+| `%rax` | `%eax` | `%ax` | `%al` | **Caller** | Return Val |
+| `%rbx` | `%ebx` | `%bx` | `%bl` | **Callee** |  |
+| `%rcx` | `%ecx` | `%cx` | `%cl` | **Caller** | Arg 4 |
+| `%rdx` | `%edx` | `%dx` | `%dl` | **Caller** | Arg 3 |
+| `%rsi` | `%esi` | `%si` | `%sil` | **Caller** | Arg 2 |
+| `%rdi` | `%edi` | `%di` | `%dil` | **Caller** | Arg 1 |
+| `%rsp` | `%esp` | `%sp` | `%spl` | **Callee** | Stack Ptr |
+| `%rbp` | `%ebp` | `%bp` | `%bpl` | **Callee** | Base Ptr? |
+| `%r8` | `%r8d` | `%r8w` | `%r8b` | **Caller** | Arg 5 |
+| `%r9` | `%r9d` | `%r9w` | `%r9b` | **Caller** | Arg 6 |
+| `%r10` | `%r10d` | `%r10w` | `%r10b` | **Caller** |  |
+| `%r11` | `%r11d` | `%r11w` | `%r11b` | **Caller** |   |
+| `%r12` | `%r12d` | `%r12w` | `%r12b` | **Callee** |   |
+| `%r13` | `%r13d` | `%r13w` | `%r13b` | **Callee** |   |
+| `%r14` | `%r14d` | `%r14w` | `%r14b` | **Callee** |   |
+| `%r15` | `%r15d` | `%r15w` | `%r15b` | **Callee** |   |
 
 Caller Save: Restore after calling func
 Callee Save: Restore before returning
