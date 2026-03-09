@@ -1,6 +1,6 @@
 # Lecture 10 - 3/3/26 
 
-> [!INFO]
+> [!NOTE]
 > You can use gdb on ASM code too!
 
 To run an assembly file, let's use an assembler, which is included with gcc/clang!
@@ -50,5 +50,3 @@ use the -Og flag to make it more readable.
 
 > [!WARNING]
 > ALWAYS USE **MOVQ** to copy memory addresses, as movl will not correctly copy, and will cause segfault
-
-
