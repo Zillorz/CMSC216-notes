@@ -12,7 +12,7 @@ Guess: %eax = 26
     1. Push the "caller" **Return Address** onto the stack, return address if for instruction after call
     2. Change rip to first instruction of the "callee" function
 - `ret` instruction
-    1. Set rip to Reeturn Address at top of stack
+    1. Set rip to Return Address at top of stack
     2. Pop the Return Address off to shrink stack
 
 This is actually why a function calling itself leads to a stack overflow!
