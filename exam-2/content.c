@@ -1,5 +1,5 @@
 // This is a helper file
-// content.asm is where the notes 
+// content.s is where the notes
 // and code you want are
 
 void over_under_flow();
