@@ -114,3 +114,5 @@ small_things->x = 3.222; // BAD!
     - `fclose` frees a `FILE*`
     - `rewind` goes back to start of `FILE*`, allows for re-reading
     - if `fscanf` or `fread` returns `EOF`, file is over, EOF = End of File
+    - `fgetc` gets one char, returns `EOF` when file is over
+    - `fgets` reads one line
