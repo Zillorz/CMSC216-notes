@@ -1,4 +1,4 @@
-# Lecture 14 - 3/24/26
+# Lecture 14 - 3/24/26 + Lecture 15 3/26/26
 
 ### Stack Alignment
 - According to the strict x86-64 ABI, must align `rsp` (stack pointer) to 16 byte boundaries when calling functions
@@ -80,7 +80,7 @@ some_ints:
         - Clobber return addresses
         - Insert executable code and run it
 - Counter-measures
-    - **Stack protection** is default in gcc in the modernb era
+    - **Stack protection** is default in gcc in the modern era
     - Inserts "canary" values on the stack near return address
     - Prior to function return, checks that canaries are unchanged
     - **Stack / Text Section** start randomized by kernel, return address and function addresses difficult to predict AOT

@@ -1,4 +1,4 @@
-# Lecture 16 - 3/26/26
+# Lecture 16 - 3/31/26
 Unix processes and exceptional control flow
 
 ### Traditional vs Modern Computing Devices
@@ -92,5 +92,3 @@ printf("Hi!");
 
 > [!NOTE]
 > This [video](https://youtu.be/SwIPOf2YAgI), is **really** good for this
-
-
