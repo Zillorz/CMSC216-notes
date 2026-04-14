@@ -51,3 +51,8 @@ int fd = open("some_file.txt", O_RDONLY)`
 
 > [!WARNING]
 > `read()` DOES not need to return the number of bytes you asked for, even if that number of bytes IS available
+
+### write() to File Descriptors
+- Write up to SIZE bytes to open file descriptor
+- Bytes taken from `buffer`, leave in intact
+- Return value is number of bytes written, -1 for error
