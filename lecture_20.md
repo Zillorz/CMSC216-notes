@@ -19,8 +19,6 @@ It doesn't (for sufficiently large len, >16kb)
 
 As it increases, throughout actually decreases, due to cache misses!
 
-With data being a 1gb array of random ints, run on a m1 macbook pro
-Run without optimizations, they kinda mess this up
 ```
 Throughout with stride: 1 is 931,721,395.176098 additions/s
 Throughout with stride: 8 is 870,210,119.557042 additions/s
@@ -30,6 +28,9 @@ Throughout with stride: 32 is 158,212,934.497652 additions/s
 Throughout with stride: 64 is 135,012,682.675594 additions/s
 Throughout with stride: 96 is 96,563,939.634631 additions/s
 ```
+
+This is with data being a 1gb array of random ints, run on a m1 macbook pro
+Run without optimizations, they kinda mess this up.
 
 ### CPU vs Memory Speed
 - Early Computing Systems had CPU Chip and Memory Chips, little if any data storage in the CPU
