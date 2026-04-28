@@ -12,6 +12,8 @@ File descriptors in UNIX I/O are ints
 - confusing 'man' entry
 
 ```c
+// must apply S_IRUSR and S_IWUSR flags if O_CREAT is specified
+// very annoying errors if not so
 int log_file =  open("log.txt", O_CREAT | OR_WRONLY, S_IRUSR | S_IWUSR);
 int stdout_save = dup(STDOUT_FILENO);
 dup2(log_file, STDOUT_FILENO);
@@ -28,3 +30,5 @@ The timestamps on linux are mtim stim and ctim, not (m/s/c)timespec like on some
 Row Major > Col Major (caches)
 
 Accessing caches is fastest sequentially, with low strides being better
+
+- `wait(NULL)` waits for all children to exit
