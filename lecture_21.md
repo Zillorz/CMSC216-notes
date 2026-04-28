@@ -46,7 +46,7 @@ free(matr);
 
 ### Single Mallo Matrices
 - Use a 1D array as a 2D matrix
-- Usually need to do math to get index \[i\]\[j\] -> \[i * rows + j\]
+- Usually need to do math to get index \[i\]\[j\] -> \[i * cols + j\]
 - Can use macros for this
 
 ### Row Major vs Column Major
