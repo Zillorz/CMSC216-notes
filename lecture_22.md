@@ -62,7 +62,7 @@ Wins greatly outweigh losses on most systems
 
 ### Virtual Memory and `mmap()`
 - Normally programs interact indirectly with Virtual Memory
-- `mmap() and mummap()` interact with Virtual Memory directly
+- `mmap()` and  `mummap()` interact with Virtual Memory directly
     - `mmap()` creates entry in page table
     - `mummap()` removes entry
     - Can map arbitrary or specific addresses
