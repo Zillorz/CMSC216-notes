@@ -28,7 +28,7 @@ cached pages (areas that the os read into memory)
 | Limited damage between processes | Unlimited damage between threads |
 | Memory protection between procs | No memory protection between threads |
 | (Marginally) Longer startup| Faster startup |
-| `fork()` / `waitpid()`   | `pthread_create()` / `_join()`  |
+| `fork()` / `waitpid()`   | `pthread_create()` / `pthread_join()`  |
 
 
 - Threads are good for lighter tasks
