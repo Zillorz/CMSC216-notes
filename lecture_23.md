@@ -30,7 +30,6 @@ cached pages (areas that the os read into memory)
 | (Marginally) Longer startup| Faster startup |
 | `fork()` / `waitpid()`   | `pthread_create()` / `pthread_join()`  |
 
-
 - Threads are good for lighter tasks
 - Processes are good for things which need better isolation, like untrusted execution like in a Chrome tabs (v8)
 

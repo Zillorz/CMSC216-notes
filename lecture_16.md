@@ -27,7 +27,7 @@ Operating System code is usually in the **kernel**, a program that starts runnin
 - Most CPUs have (at least) two modes
     1. **User / Normal** mode
     2. **Kernel / Privileged / Supervisor**  mode
-- User programs run in user mode, cannot directory manipulate hardware or access to certain resources
+- User programs run in user mode, cannot directly manipulate hardware or access to certain resources
 - Requests OS to perform some operations which jumps to kernel code running in kernel mode
 
 Ex) BSD, Linux, NT, XNU
