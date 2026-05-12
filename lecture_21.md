@@ -18,7 +18,7 @@ for(int i = 0; i < rows; i++) {
     matr[i] = malloc(cols * sizeof(int));
 }
 
-process(matr[i][j]);
+process(matr, rows, cols);
 
 for(int i = 0; i < rows; i++) {
     free(matr[i]);
@@ -36,7 +36,7 @@ for(int i = 0; i < rows; i++) {
     matr[i] = data + i * cols;
 }
 
-process(matr[i][j]);
+process(matr, rows, cols);
 
 free(data);
 free(matr);
@@ -44,7 +44,7 @@ free(matr);
 
 2 mallocs strategy is more cache-efficient
 
-### Single Mallo Matrices
+### Single Malloc Matrices
 - Use a 1D array as a 2D matrix
 - Usually need to do math to get index \[i\]\[j\] -> \[i * cols + j\]
 - Can use macros for this
