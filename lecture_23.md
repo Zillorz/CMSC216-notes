@@ -34,7 +34,7 @@ cached pages (areas that the os read into memory)
 - Threads are good for lighter tasks
 - Processes are good for things which need better isolation, like untrusted execution like in a Chrome tabs (v8)
 
-### Every Thread has it's on stack
+### Every Thread has its own stack
 - Threads share heap, globals, and text regions of memory
 - Threads have their own stack space
 
@@ -80,7 +80,7 @@ int main() {
     pthread_t thread_1;
     pthread_create(thread_1, NULL, doit, (void *) 42);
 
-    int xrem;
+    int xrem; // return value
     pthread_join(thread_t, (void *) &xrem);
 
     // COMPLETE LATER

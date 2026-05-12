@@ -1,4 +1,4 @@
-# Lecture 14 - 3/24/26 + Lecture 15 3/26/26
+# Lecture 14 - 3/24/26 + Lecture 15 - 3/26/26
 
 ### Stack Alignment
 - According to the strict x86-64 ABI, must align `rsp` (stack pointer) to 16 byte boundaries when calling functions

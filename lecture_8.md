@@ -101,8 +101,8 @@ Bitwise ops evaluate on a per-bit level
 
 ### Bitwise shifts
 - Shift operations move bits within a field of bits
-- `a << k` shift right k bits
-- `a >> k` shift left k bits
+- `a << k` shift left k bits
+- `a >> k` shift right k bits
 - All integral types can use shifts
 - Doesn't work on not integer types (floats and ptrs)
 - Right shifts respect signed bits

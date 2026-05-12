@@ -73,7 +73,7 @@ As you go up, less memory but more speed
 
 ### Numbers Everyone Should Know
 - "Main Memory" is composed of many different physical devices that work together and have differing sizes/speeds
-- Accessing memory at #4096 mau involve some or all of
+- Accessing memory at #4096 may involve some or all of
     - CPU Cache
     - Ram
     - SSD/HDD
