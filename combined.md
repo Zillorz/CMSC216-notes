@@ -11,7 +11,7 @@ This file can also be useful for searching, but I would recommend using grep or 
 | Bytes [^1]| Name | Range |
 | ------------- | ------------- | -------------- |
 |   | INTEGRAL |   |
-| 1 | char | 0 to 255 [^4] |
+| 1 | char | 0 to 255 [^3] |
 | 2 | short | -32,768 to 32,767 |
 | 4 | int | -2^31 to 2^31 - 1 |
 | 8 | long | -2^63 to 2^63 - 1 |
@@ -26,7 +26,7 @@ This file can also be useful for searching, but I would recommend using grep or 
 
 [^1]: These sizes are not standard, portable code cannot assume any given size
 [^2]: We run 64 bit computers, so we will assume 8 bytes for every pointer
-[^4]: Fun fact about characters, these aren't always guaranteed to be signed. This is also implementation dependent and portable code cannot assume signed or unsigned chars. On x86_64 machines, these are signed. On ARM64, it depends on the machine, where MacOS/IOS sign chars, but Windows, Linux, and Android do not.
+[^3]: Fun fact about characters, these aren't always guaranteed to be signed. This is also implementation dependent and portable code cannot assume signed or unsigned chars. On x86_64 machines, these are signed. On ARM64, it depends on the machine, where MacOS/IOS sign chars, but Windows, Linux, and Android do not.
 
 ### More about pointers
 - Pointers are written with a *, e.g. 
@@ -119,14 +119,14 @@ stdint.h defines int64, uint64 and other int types with guaranteed sizes
 
 ## Arrays
 - A continuous block of homogeneous data
-- Automatically allocated by compiler with a fixed size [^3]
+- Automatically allocated by compiler with a fixed size [^4]
 - Uses \[ \] syntax
 - Refer to element with arr\[3\]
 - Bare name 'arr' is the memory address where array starts
 - This actually means arrays are also pointers!
 - And array indexing is pointer dereferenced, `array[3]` == `*(array + 3)`
 
-[^3]: This is referring to fixed size arrays, not heap allocated arrays made with malloc/calloc
+[^4]: This is referring to fixed size arrays, not heap allocated arrays made with malloc/calloc
 
 # Lecture 4 - 2/5/26
 
@@ -326,11 +326,11 @@ A running program has 4 regions of memory
 3. **Global**: variables outside of functions, `static` vars
 4. **Text**: Program instructions in binary
 
-- Stack grows towards the heap, if they collide, we get a Stack Overflow error. [^1]
+- Stack grows towards the heap, if they collide, we get a Stack Overflow error. [^5]
 - Global and Text regions are usually fixed in size.
-- "Logical Regions" for humans to organize their programs; no physical differences for regions[^2]
+- "Logical Regions" for humans to organize their programs; no physical differences for regions[^6]
 
-[^1]: Code block below demonstrates stack overflow (code: -1073741571), on GitHub might be somewhere else
+[^5]: Code block below demonstrates stack overflow (code: -1073741571), on GitHub might be somewhere else
 ```c
 int expand_stack() {
     expand_stack();
@@ -339,7 +339,7 @@ int expand_stack() {
 expand_stack();
 ```
 
-[^2]: Technically memory can have different physical locations (CPU cache vs RAM) but these aren't covered until WAY later in the course
+[^6]: Technically memory can have different physical locations (CPU cache vs RAM) but these aren't covered until WAY later in the course
 
 Common misconception: `sizeof(thing)`
 
@@ -534,11 +534,11 @@ free(fs);
 
 ### Common control structures
 - While loops, for loops, do while loops, breaks, continues
-- if, else if, else, goto [^1]
+- if, else if, else, goto [^7]
 - labels:
 - Very basic, same as Java
 
-[^1]: DO NOT USE GOTO, you need permission from Kauffman to not lose ALL style points with a goto :/
+[^7]: DO NOT USE GOTO, you need permission from Kauffman to not lose ALL style points with a goto :/
 
 `switch()/case`: The **worst** control structure
 
