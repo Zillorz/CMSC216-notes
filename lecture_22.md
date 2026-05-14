@@ -1,4 +1,4 @@
-# 4/23/26 - Lecture 22
+# Lecture 22 - 4/23/26
 
 ### Conflicts in Memory
 - Two programs running could both reference the same absolute address

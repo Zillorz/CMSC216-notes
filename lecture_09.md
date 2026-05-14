@@ -3,7 +3,7 @@
 ### Showing bits
 - `printf()`
     - `%d` is Decimal
-    - `%x` is Hexdeciaml
+    - `%x` is Hexadecimal
     - `%o` is Octal
     - `%c` is Character
 - No binary specifier
@@ -31,7 +31,7 @@ int main() {
 ```
 
 ### Bit Masking
-- Semi-common for funtcions to accept bit patterns which indicate true/false operations
+- Semi-common for functions to accept bit patterns which indicate true/false operations
 - Frequently makes use of bit **masks** which are constants associated with specific bits
 - Ex) Unix permissions
 - Use them to create options to C functions
@@ -49,7 +49,7 @@ int permissions = do(CAN_COMMENT | CAN_WATCH);
 
 ### Unix permissions with octal
 - Octal arises with **Unix file permissions**
-- Every file has 3 permissions for 3 entites
+- Every file has 3 permissions for 3 entities
 - Permissions are true/false so a single bit will suffice
 - `ls -l` shows permissions
 - `chmod` 777 is an octal permission

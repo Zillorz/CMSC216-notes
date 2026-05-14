@@ -1,4 +1,4 @@
-# 4/16/26 - Lecture 20 
+# Lecture 20 - 4/16/26
 
 ### Core Idea
 Study the following code
@@ -15,9 +15,9 @@ int sum_simple(int len, int stride) {
 ```
 
 We would expect the throughput (additions / s) to stay the same as stride increases right?
-It doesn't (for sufficiently large len, >16kb)
+It doesn't. 
 
-As it increases, throughout actually decreases, due to cache misses!
+As it increases, throughput actually decreases, due to cache misses!
 
 ```
 Throughout with stride: 1 is 931,721,395.176098 additions/s
@@ -29,12 +29,14 @@ Throughout with stride: 64 is 135,012,682.675594 additions/s
 Throughout with stride: 96 is 96,563,939.634631 additions/s
 ```
 
-This is with data being a 1gb array of random ints, run on a m1 macbook pro
-Run without optimizations, they kinda mess this up.
+This is with data being a 1GB array of random ints, run on a m1 macbook pro
+Run without optimizations, they kinda mess this up (too fast).
+
+Also, this is a device with SOC ram, use a laptop with separate ram and the difference will be more obvious.
 
 ### CPU vs Memory Speed
 - Early Computing Systems had CPU Chip and Memory Chips, little if any data storage in the CPU
-- CPU and Memoy Chips ran at similar speeds / clock freqs., CPU would fetch from mem, do op, and write to mem
+- CPU and Memory Chips ran at similar speeds / clock freqs., CPU would fetch from mem, do op, and write to mem
 - CPU chip speed was a lot easier to speed up compared to memory
 - Registers and Cache were developed in response to the growing speed difference between CPU and Memory
 - Registers, LN cache

@@ -43,7 +43,7 @@ addq $55, ($rbx) # *rbx += 55
 ```
 
 ### The Other ALU Instructions
-- Most ALU instructions follow the same patter as AddX: two operands, second gets changed
+- Most ALU instructions follow the same patter as addX: two operands, second gets changed
 - Some one operand instructions as well
 - addX, subX, imulX, andX, orX, xorX, salX, shlX, sarX, shrX
 - incX, decX, negX, notX - one parameter
@@ -75,5 +75,5 @@ Division is painful
 ### Jump instructions
 - **Labels** in assembly indicate jump targets like .LOOP
 - **Unconditional Jump**: always jump to a new location changing %rip non-sequentially 
-- **Comparison/TEST** Instruction, sets EFLAGS bit indictating relation between registers/value
+- **Comparison/TEST** Instruction, sets EFLAGS bit indicating relation between registers/value
 - **Conditional Jump**: Jumps to a new location if certain bits of EFLAGS are set by changing %rip non-sequentially, otherwise continues sequential execution

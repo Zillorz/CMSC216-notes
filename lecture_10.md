@@ -13,7 +13,7 @@ use the -Og flag to make it more readable.
 > We use AT&T syntax, intel syntax will result in a ZERO on exam/lab/projects
 
 ### Basic Instruction Classes
-- Remember: Goal is to understand assemblh as a target for higher level languages
+- Remember: Goal is to understand assembly as a target for higher level languages
 - Means we won't hit all 4,834 pages of the x86-64 manual
 - Brown University's x64 cheat sheet is a good overview
 - x86 assembly from Yale is also good, but limited to 32bit

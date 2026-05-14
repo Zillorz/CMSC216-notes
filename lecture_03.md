@@ -5,7 +5,7 @@
 | Bytes [^1]| Name | Range |
 | ------------- | ------------- | -------------- |
 |   | INTEGRAL |   |
-| 1 | char | -128 to 127 [^4] |
+| 1 | char | 0 to 255 [^4] |
 | 2 | short | -32,768 to 32,767 |
 | 4 | int | -2^31 to 2^31 - 1 |
 | 8 | long | -2^63 to 2^63 - 1 |
@@ -15,7 +15,7 @@
 | 8 | double | +- 1.8e+308 |
 | ------------- | ------------- | -------------- |
 |   | POINTER |   |
-| 4/8 [^2]  | pointer  | Either 32/64 bits |
+| 8 [^2]  | pointer  | Either 64 bits    |
 |   | array | type of pointer |
 
 [^1]: These sizes are not standard, portable code cannot assume any given size
@@ -29,8 +29,7 @@
 - Array indexing is a pointer deference
 - `array[12]` = `*(array + 12)`
 - Strings are represented by `char*` or `char[]`, there isn't a dedicated string type 
-- Same with booleans, usually represented by char/int with 0 = false and 1 = true
-- `void` normally means, nothing but a `void*` is just a pointer to a memory address that stores anything
+- `void` normally means nothing, but a `void*` is just a pointer to a memory address that stores anything
 
 ### Recall: Pointers, Address, and Dereferences
 `type *ptr` Declares a pointer variable
@@ -73,12 +72,12 @@ double x = 1.2345;
 void *ptr;
 
 ptr = &a;
-// we set b to the deferenced value of ptr, after casting ptr to an int pointer
+// we set b to the dereferenced value of ptr, after casting ptr to an int pointer
 int b = *((int *) ptr); 
 // b = 5
 
 ptr = &x;
-// we set y to the deferenced value of ptr, after casting ptr to a double pointer
+// we set y to the dereferenced value of ptr, after casting ptr to a double pointer
 double y = *((double *) ptr);
 // y = 1.2345
 
@@ -86,7 +85,7 @@ double y = *((double *) ptr);
 int c = *((int *) ptr);
 printf("%d", c); // 309237645
 ```
-'c' will have the same bits as 'x' (at least the first 32 bits of x), but the alternate formats and size. 'c' will be a completely gibberish number.
+'c' will have the same bits as 'x' (at least the first 32 bits of x), but the alternate formats and size cause 'c' to be a completely gibberish number.
 
 ### Void pointers
 - A pointer which points to ==anything==
@@ -109,16 +108,16 @@ There are actually more types
 | unsigned int   | 0 to 2^32 - 1   |
 | unsigned long   | 0 to 2^64 - 1   |
 
-stdint.h defines int64, uint64 and other int types with garunteed sizes
+stdint.h defines int64, uint64 and other int types with guaranteed sizes
 
 
 ## Arrays
-- A continuous block of homogenous data
+- A continuous block of homogeneous data
 - Automatically allocated by compiler with a fixed size [^3]
 - Uses \[ \] syntax
 - Refer to element with arr\[3\]
 - Bare name 'arr' is the memory address where array starts
 - This actually means arrays are also pointers!
-- And array indexing is pointer deferencing, `array[3]` == `*(array + 3)`
+- And array indexing is pointer dereferenced, `array[3]` == `*(array + 3)`
 
-[^3]: This is refering to fixed size arrays, not heap allocated arrays made with malloc/calloc
+[^3]: This is referring to fixed size arrays, not heap allocated arrays made with malloc/calloc

@@ -22,8 +22,8 @@ These out of bounds accesses work, but return garbage, and may cause segfaults.
 | Dereference | Yes: *p | No |
 | Arithmetic | Yes: ++p | No |
 | Assign to array? | *p = a | No |
-| Interchangable | Yes | Yes |
-| Has length property | No | No |
+| Interchangeable | Yes | Yes |
+| Has length propert | No | No |
 
 ```c standalone
 void print_arr(int a[]) {
@@ -41,12 +41,12 @@ int main() {
     int x = 21;
     p = &x;
 
-    // interchangable
+    // interchangeable
     print_arr(p);
 
     int a[] = { 5, 10, 15 };
 
-    // interchangable
+    // interchangeable
     print_ptr(a);
 
     // a stores the memory address of a[0], therefore a == &a[0]
@@ -112,11 +112,10 @@ scanf(" %s", name + len + 1); // makes scanf fill after the first name + ' '
 printf("Hello %s", name); // now name is 'firstname lastname\0'
 ```
 
-
-C strings end with the null terminator '\0', and have no length property.
+C strings end with the null terminator '\0' and have no length property.
 Accessing the length with a function like `strlen` is actually `O(n)`
 
-Another thing about this null terminator, not having it in a string can cause undefined behavior. 
+Another thing the null terminator, not having it in a string can cause undefined behavior. 
 For example, calling `printf` or `strlen` would cause problems.
 
 `scanf` can also cause a buffer overflow, if the user inputs more than 128 characters, which is also undefined behavior! You can try this with the above example!
@@ -137,5 +136,5 @@ For example, calling `printf` or `strlen` would cause problems.
 - Include with `#include <string.h>`   
 - Null termination expected
 - `strlen(s)` - length of string
-- `strcpy(dst, src)` - copys string from src to dst
+- `strcpy(dst, src)` - copies string from src to dst
 - `strcmp(s1, s2)` - compares string lexicographically, 0 if equal

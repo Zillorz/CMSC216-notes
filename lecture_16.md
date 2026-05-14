@@ -2,7 +2,7 @@
 Unix processes and exceptional control flow
 
 ### Traditional vs Modern Computing Devices
-- Old-school computers had a single executing programs which could interact freely with all parts of te computing hardware
+- Old-school computers had a single executing programs which could interact freely with all parts of the computing hardware
 - Modern computing devices have different expectations summarized below
 
 | Traditional   | Modern |
@@ -15,7 +15,7 @@ Unix processes and exceptional control flow
 | Apple II: insert disk to run program | Mac OS: Click to start another program |
 
 - New hardware and expectations led to new concepts
-- **Operating Systems**: "manager" program that coordinates activites of all programs / users, manages hardware and provides abstraction layer, enforces security and fairness
+- **Operating Systems**: "manager" program that coordinates activities of all programs / users, manages hardware and provides abstraction layer, enforces security and fairness
 - **Process**: a running program with its context
 
 ### OS Kernel and Kernel Mode
@@ -43,7 +43,7 @@ Ex) BSD, Linux, NT, XNU
 - Will discuss these from a **Systems Programming** perspective: control low-level program details to utilize OS Service Hardware as effectively as possible
 
 ### Exceptional Control flow
-- CPUs use "regular" control flow mostof the time but support several kinds of **exceptional control flow**
+- CPUs use "regular" control flow most of the time but support several kinds of **exceptional control flow**
 - General idea is as follows
 
 - Kernel tracks data structures associated with Processes that allows them to be paused/resumed

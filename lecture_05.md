@@ -68,12 +68,12 @@ int expand_stack() {
 expand_stack();
 ```
 
-[^2]: Technically memory can have different physical locations (CPU cache vs RAM) but these are complicated
+[^2]: Technically memory can have different physical locations (CPU cache vs RAM) but these aren't covered until WAY later in the course
 
 Common misconception: `sizeof(thing)`
 
 - `sizeof(thing)` returns a **Compile Time Size** of thing from C source
-- Useful when `malloc()`ing stuff like `int *arr = malloc(count * sizeof(int));`
+- Useful when `malloc()`'ing stuff like `int *arr = malloc(count * sizeof(int));`
 - **NOT USEFUL** for sizes of arrays or strings
 ```c
 int *arr = malloc(32 * sizeof(int)); // good use of sizeof
@@ -87,7 +87,7 @@ printf("Num elements: %d", nelems); // This always prints 8!
 Valgrind: Suite of tools including Memcheck
 - Catches most memory errors
     - Use of uninitialized memory
-    - Reading/writing free'd memory
+    - Reading/writing freed memory
     - Reading/writing before/after malloc block
     - Memory leaks
 - Source line where problem arose (but not its cause)

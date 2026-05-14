@@ -30,7 +30,7 @@ int fd = open("some_file.txt", O_RDONLY)`
 `open()`/`close()` show common features of many system calls
 - Returns -1 on errors
 - Show errors using the `perror()` function
-- Use of vertical pipe (|) to bitwise-OR several options
+- Use of vertical pipe (|) to bitwise-OR several options/flags
 
 ### read() from File Descriptors
 - Read up to SIZE from an open file descriptor

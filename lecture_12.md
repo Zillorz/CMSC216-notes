@@ -8,7 +8,7 @@
 
 ### leaX: Load Effective Address
 - Memory address must often be loaded into registers
-- Often done with a leaX, usually leaQ on 64-bit platforms
+- Often done with a leaX, usually leaq on 64-bit platforms
 - Soft of like "address-of" op & in C but a bit more general
 
 > [!NOTE]
@@ -21,18 +21,20 @@
 
 | Bit | Abbrev| Name | Description |
 | --------------- | --------------- | --------------- | --------------- |
-| 0 | aaaa | Item3.1 | Item4.1 |
-| 6 | Item2.2 | Item3.2 | Item4.2 |
-| 7 | Item2.3 | Item3.3 | Item4.3 |
-| | Item2.4 | Item3.4 | Item4.4 |
+| 0  | CF | Carry Flag | |
+| 6  | ZF | Zero Flag| |
+| 7  | SF | Sign Flag | |
+| 8  | TF | Trap Flag | |
+| 9  | IF | Interrupt Flag | |
+| 11 | OF | Overflow Flag | |
 
 ### Comparisons and Tests
 - `cmpX B, A` compute the flags based on A - B
-- `testX A, B` compute the flags based on A & B
+- `testX B, A` compute the flags based on A & B
 
-- Immediates like $2 must not be the first argument B
-- B, A are NOT altered with cmp/test instrctions
-- EFLAGA register IS changed by cmp/test to incdicate less than, greater than, 0, etc.
+- Immediate values like $2 must not be the first argument B
+- B, A are NOT altered by the cmp/test instructions
+- EFLAGS register IS changed by cmp/test to indicate less than, greater than, 0, etc.
 
 ### Jump instructions
 - `jmp` always jumps
@@ -45,8 +47,7 @@ Logical boolean operators like `a && b` and `x || y` translate to sequences of c
 - `call function`
 - `ret`
 - Callee save registers must be restored by a function
-- Caller save registers are not perserved by a function
+- Caller save registers are not preserved by a function
 
-- `call` instructions always tranfder control to start of function
+- `call` instructions always transfer control to start of function
 - `ret` instruction must transfer to different locations sometimes
-- When this is necessary, 

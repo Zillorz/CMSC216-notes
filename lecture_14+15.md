@@ -20,7 +20,7 @@ main:
 ### History: rbp
 - 32-bit x86 / IA32 assembly used rbp and rsp to describe stack frames
 - All function args pushed onto the stack when calling, changes both Stack and Base pointer
-- x86-64: optimizies %rbp for general purpose use, points at stack only in special situations
+- x86-64: optimizes %rbp for general purpose use, points at stack only in special situations
 
 > [!WARNING]
 > Some examples (like those on Wikipedia) may include this legacy calling method
@@ -66,7 +66,7 @@ some_ints:
 ### Packed Structures as Procedure Arguments
 - Passing pointers to structs is 'normal': registers contain addresses to main memory
 - Passing actual structs may result in *packed structs* where several fields are in a single register
-- Assembly must *unpack* thse through **shifts and masking**
+- Assembly must *unpack* these through **shifts and masking**
 
 ### Large Packed Structs
 - Structs that don't fit into single registers may be packed across several argument registers
@@ -91,7 +91,7 @@ some_ints:
 ### Floating Point Operations
 - Original Intel 8086 Processor didn't do floating point ops
 - Had to buy a co-processor (Intel 8087) to enable FP ops
-- Most modern CPUs support FP ops but they feel seperate from the integer ops: FPU verses ALU
+- Most modern CPUs support FP ops but they feel separate from the integer ops: FPU verses ALU
 - Can be used as "scalars" - single values, but
 - `xmmI` is 128 bits long
     - hold 2 doubles or 4 floats

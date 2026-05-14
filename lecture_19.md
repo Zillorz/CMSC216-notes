@@ -1,4 +1,4 @@
-# 4/14/26 - Lecture 19
+# Lecture 19 - 4/14/26 
 
 ### read()/write() work with bytes
 - In C, byte=char
@@ -40,8 +40,8 @@ some_program 2> /dev/null
 - `dup2(src, dst);` copies fd at src to dst
 (See picture)
 
-### C `FILE` structs use file descirptors in UNIX
-Typical Unix implemenation of standard I/O library `FILE` is
+### C `FILE` structs use file descriptors in UNIX
+Typical Unix implementation of standard I/O library `FILE` is
 - A file descriptor
 - Some buffers with positions
 - Some options controlling buffering
@@ -98,8 +98,8 @@ typedef	struct __sFILE {
 
 
 ### Measuring Time in Code
-- Measure CPU time with the standard `clock()` cunction; measure time difference and convert to seconds
-- Meaasure Wall (real) time with `gettimeofday()` or related functions; fill struct with info on time of day
+- Measure CPU time with the standard `clock()` function; measure time difference and convert to seconds
+- Measure Wall (real) time with `gettimeofday()` or related functions; fill struct with info on time of day
 
 > [!NOTE]
 > Wall and CPU time can diverge with scheduling, if other programs have significant competition with your program, Wall can be a lot longer than CPU time

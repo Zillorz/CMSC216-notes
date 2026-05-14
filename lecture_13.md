@@ -27,7 +27,7 @@ So doing a poor job restoring %rsp can be detrimental to execution.
 - Stack is often to used to store local variables, stack pointer %rsp is manipulated via push/subq
 
 ### Pushing and Popping the Stack
-- If local variales or callee save regs are needed on the stack, can use `push/pop` for these
+- If local variables or callee save regs are needed on the stack, can use `push/pop` for these
 - Push and Pop Instructions are compound: manipulate %rsp and move data in a single instruction
 - The stack is a **stack**, so it's FILO
 - This can be used to use callee save registers, as you can push them onto the stack, modify them, and then restore then before returning to the caller

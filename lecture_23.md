@@ -15,7 +15,7 @@ cached pages (areas that the os read into memory)
 ## Threads
 
 ### Processes vs Threads
-- From the Operating System Perspective, Processes and Threads are "schedulable" entities that want time on the CPU
+- From the Operating System Perspective, Processes and Threads are "scheduleable" entities that want time on the CPU
 - Differences come down to **sharing** and what resources are shared by default
 - When cooperating on shared data, both Processes and Threads should use coordination mechanisms to ensure computations are correct
 
@@ -40,7 +40,7 @@ cached pages (areas that the os read into memory)
 ### Motivation for Threads
 - Like use of `fork()`, threads increase program complexity
 - **Improving execution efficiency** is a primary motivator
-- Assign indepedent tasks in program to different threads
+- Assign independent tasks in program to different threads
 - 2 common ways this can speed up program runs
 
 #### Parallel Execution with Threads
@@ -49,7 +49,7 @@ cached pages (areas that the os read into memory)
 - REQUIRES multiple CPUs to improve on Single thread *Why?*
 
 #### Hide Latency of Slow Tasks via Threads
-- Slow tasks block a thread but Fast tasks can proceed indepedently allowing programs to stay busy while running
+- Slow tasks block a thread but Fast tasks can proceed independently allowing programs to stay busy while running
 - Textbook coverage (I/O latency reduction)
 - Does NOT require multiple CPUs to get benefit, *Why?*
 

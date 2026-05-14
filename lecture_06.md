@@ -34,7 +34,7 @@ int main() {
 
 ## Structs
 Heterogeneous Groupings of Data
-- Arrays are homo genius; all elements the same type
+- Arrays are homogeneous; all elements the same type
 - `structs` are C's way of defining heterogeneous data
 - Each **field** can be a different kind/type
 - One instance of a `struct` has all fields

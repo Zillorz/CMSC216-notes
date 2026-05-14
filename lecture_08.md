@@ -9,8 +9,8 @@
 ### Unicode
 - ASCII only has American symbols and alphabet
 - The rest of the world doesn't have representation
-- Unicode uses 1-4 bytes per character to represent 1,112,064 codepoints
-- ASCII only uses 7 bits, so the 8th bit in unicode indictates extension for multiple bytes
+- Unicode uses 1-4 bytes per character to represent 1,112,064 code points
+- ASCII only uses 7 bits, so the 8th bit in unicode indicates extension for multiple bytes
 - Requires software to understand coding convention allowing broader language support
 - ASCII is a proper subset of UTF-8, so it's backwards compatible
 - Really annoying to support in C, so we'll ignore it
@@ -81,7 +81,7 @@ printf("23 - 34 = %hhu\n", p - 34);
 - Algorithms are the same as base 10 but more painful to do by hand
 - The pain is reflected in the hardware speed of these operations
 - The Arithmetic and Logic Unit (ALU) does integer ops
-- A clock ticks in the machine (cpu) at some rate like 5Ghz (5 billion times per second)
+- A clock ticks in the machine (CPU) at some rate like 5GHZ (5 billion times per second)
 - Under ideal circumstances typical ALU Op speeds are
 
 | Operation   | Cycles   |
@@ -93,7 +93,7 @@ printf("23 - 34 = %hhu\n", p - 34);
 | Multiplication | 3   |
 | Division   | >30   |
 
-- Due to disparity, it is worth knwoing the relation between multiplication, division, and bitwise operations
+- Due to disparity, it is worth knowing the relation between multiplication, division, and bitwise operations
 - Compiler often uses these tricks: shift rather than multiply by divide
 
 Bitwise ops evaluate on a per-bit level

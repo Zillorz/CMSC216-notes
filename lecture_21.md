@@ -1,7 +1,7 @@
-# 4/21/26 - Lecture 21
+# Lecture 21 - 4/21/26
 
 ### Direct Mapped Cache
-- CPU Caches are normally LRU
+- CPU Caches are normally LRU (but with some special coloring/restrictions)
 - Regions of memory map to one cache lane
 
 ## 2D Arrays - Matrices
@@ -53,14 +53,14 @@ free(matr);
 - Many languages use **Row-Major** order for 2D arrays/lists
      - C, Java, Python, Ocaml
      - mat\[i\] is a row, mat\[i\]\[j\] is the ith row, jth col
-- Numerically-oriented langauges use **Column-Major** order
+- Numerically-oriented languages use **Column-Major** order
      - Fortran, Matlab, R, Ocaml
      - mat\[j\] is a col
 - Beware of convention to save performance
     - A sum on a appreciably large matrix is 6x faster with the correct order, due to cache
 
 ## Flavors of Permanent Storage
-- Many types of fast memory, but they're **small** and *ephermeral* - all bits become 0 when powered off
+- Many types of fast memory, but they're **small** and *ephemeral* - all bits become 0 when powered off
 - At the bottom of the pyramid are slow and **large** memory
 - These are persistent
 
@@ -88,6 +88,6 @@ free(matr);
 - Extremely cheap for GB, can store a LOT of data
 - Only writable once
 
-## The I/O System Connects CPU and Periphals
+## The I/O System Connects CPU and Peripherals
 - Motherboard connects everything together
 - Connects CPU to ram, storage, and everything else (sata, pci(e), usb)

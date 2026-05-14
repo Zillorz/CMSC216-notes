@@ -56,8 +56,6 @@ free(fs);
 
 `switch()/case`: The **worst** control structure
 
-Aside: I honestly disagree with this in any other programming language, but C has a really ugly error prone syntax. The Rust `match` statement is really nice and I think that having a exhaustive, break free, switch/match is superior to if/else!
-
 Kauffman really, really hates switch statements. NEVER use them unless you're writing a emulator?
 
 ### A program is born
@@ -74,11 +72,10 @@ Kauffman really, really hates switch statements. NEVER use them unless you're wr
 - Result: executable program
 - Running a program requires a loader
 
-
 **END OF EXAM 1 CONTENT**
 
 ### Binary encoding
-- Unsigned integers are always positive (recall [lecture 3](/lecture_3.md)
+- Unsigned integers are always positive (recall [lecture 3](/lecture_03.md))
 - To understand binary encoding, first recall base 10 
 - For any base, numbers are represented as follows
 - C\_0 + C\_1 * B^1 + C\_2 * B^2 + C\_3 * B^3 ...
