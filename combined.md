@@ -21,11 +21,11 @@ This file can also be useful for searching, but I would recommend using grep or 
 | 8 | double | +- 1.8e+308 |
 | ------------- | ------------- | -------------- |
 |   | POINTER |   |
-| 8 [^2]  | pointer  | Either 64 bits    |
+| 8 [^2]  | pointer  | 64 bits    |
 |   | array | type of pointer |
 
 [^1]: These sizes are not standard, portable code cannot assume any given size
-[^2]: We run 64 bit computers, so we will assume 8 bytes for every pointer
+[^2]: We run 64 bit computers, so we will assume 8 bytes for every pointer, older computers have 32bit pointers
 [^3]: Fun fact about characters, these aren't always guaranteed to be signed. This is also implementation dependent and portable code cannot assume signed or unsigned chars. On x86_64 machines, these are signed. On ARM64, it depends on the machine, where MacOS/IOS sign chars, but Windows, Linux, and Android do not.
 
 ### More about pointers
